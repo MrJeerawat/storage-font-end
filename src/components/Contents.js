@@ -18,11 +18,12 @@ const StyledLink = styled(Link)`
         transform: scale(1.1);
     }
 `;
-const Contents = () => {
+const Contents = ({setOpenModal}) => {
+    console.log('log here',typeof(setOpenModal));
     return (
         <>
             <Card>
-                <StyledLink to='equipment'><CardContent title={'All Equipments'}/></StyledLink>
+                <StyledLink to='equipment'><CardContent title={'All Equipments'} onClick={()=>setOpenModal(true)}/></StyledLink>
             </Card>
             <Card>
                 <StyledLink to='borrowed'><CardContent title={'Borrowed'} /></StyledLink>

@@ -4,8 +4,6 @@ import ListCard from '../components/ListCard'
 import styled from 'styled-components'
 import img1 from '../assets/1.png'
 import img2 from '../assets/2.png'
-import img3 from '../assets/3.png'
-import img4 from '../assets/4.png'
 const Wrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
@@ -28,8 +26,6 @@ const ReadyToBorrow = () => {
                 <WrapperList>
                     <ListCard img={img1} title={'Mortor Cycle'} desc={desc} status={'ready'}/>
                     <ListCard img={img2} title={'Car'} desc={desc} status={'ready'}/>
-                    {/* <ListCard img={img3} title={'Boast'} desc={desc} status={'borrowed'}/>
-                    <ListCard img={img4} title={'airplane'} desc={desc} status={'borrowed'}/> */}
                 </WrapperList >
             </Wrapper>
         </div>

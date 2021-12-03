@@ -9,14 +9,14 @@ const Wrapper = styled.div`
     z-index: -1;
     
 `;
-const HomePages = () => {
+const HomePages = ({setOpenModal}) => {
     // console.log(callComponents);
     return (
         <div>
 
             <Navbar />
             <Wrapper> 
-                <Contents/>
+                <Contents setOpenModal={setOpenModal}/>
             </Wrapper>
         </div>
     )

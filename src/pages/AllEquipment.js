@@ -29,7 +29,7 @@ const AllEquipment = () => {
             <Navbar/>
             <Wrapper>
                 <WrapperList>
-                    <ListCard img={img1} title={'Mortor Cycle'} desc={desc} status={'ready'}/>
+                    <ListCard img={img1} title={'Mortor Cycle'} desc={desc} status={'ready'} />
                     <ListCard img={img2} title={'Car'} desc={desc} status={'ready'}/>
                     <ListCard img={img3} title={'Boast'} desc={desc} status={'borrowed'}/>
                     <ListCard img={img4} title={'airplane'} desc={desc} status={'borrowed'}/>

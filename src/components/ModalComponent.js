@@ -2,21 +2,31 @@ import React from 'react'
 import styled from 'styled-components'
 
 const ModalStyle = styled.div`
-    width: 500px;
-    height: 70vh;
-    border: 1px solid;
+    flex: 1;
     display: flex;
     align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+ 
 `;
 const ModalContent = styled.div`
     display: flex;
     justify-content: center;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 600px;
 `;
 const ButtonX = styled.button`
     padding: 20px;
     background-color: green;
 `;
-const Modal = () => {
+const ModalComponent = () => {
     return (
         <ModalStyle>
             <ModalContent>
@@ -27,4 +37,4 @@ const Modal = () => {
     )
 }
 
-export default Modal
+export default ModalComponent

@@ -7,6 +7,7 @@ import Log from './pages/Log'
 import ReadyToBorrow from './pages/ReadyToBorrow'
 import AllEquipment from './pages/AllEquipment'
 import Borrowed from './pages/Borrowed'
+import ModalComponent from './components/ModalComponent';
 
 const Containner = styled.div`
 width: 100%;
@@ -16,24 +17,22 @@ flex-wrap: wrap;
 `;
 
 const App = () => {
-  // const [page, setpage] = useState('HomePage')
-  // const callComponents = async (page) =>{
-  //   setpage(page)
-  // }
-  // console.log(page);
+  const [openModule,setOpenModal] = useState(false);
+  console.log(typeof(setOpenModal));
   return (
     <BrowserRouter>
       <Containner>
         <Routes>
-          <Route exact path='/' element={<HomePages />}></Route>
+          <Route exact path='/' element={<HomePages serOpenModal={setOpenModal}/>}></Route>
           <Route exact path='/login' element={<Login />}></Route>
           <Route exact path='/equipment' element={<AllEquipment />}></Route>
           <Route exact path='/borrowed' element={<Borrowed />}></Route>
           <Route exact path='/ready' element={<ReadyToBorrow />}></Route>
           <Route exact path='/log' element={<Log />}></Route>
         </Routes>
-        {/* <HomePages callComponents={callComponents} /> */}
+        
       </Containner>
+      {openModule &&<ModalComponent/>}
     </BrowserRouter>
   )
 }
