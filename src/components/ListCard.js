@@ -13,16 +13,45 @@ const StyleListCard = styled.div`
     border-radius: 20px;
     display: flex;
     background-color: white;
+    transition: transform .2s;
+    cursor: pointer;
+    :hover{
+        
+        transform: scale(1.01);
+    }
+    @media (max-width: 1245px) {
+        width: 100%;
+    }
+    @media (max-width: 480px) {
+        width: 100%;
+        display: block;
+        height: auto;
+    }
 `;
-const Img = styled.img`
-    flex: 2;
+const WrapperImg = styled.div`
+    flex:2;
+    /* border:1px solid; */
     margin: 5px;
     border-radius: 20px;
+`;
+const Img = styled.img`
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  transition: transform .2s;
+    cursor: pointer;
+    :hover{
+        
+        transform: scale(1.1);
+    }
 `;
 const Contents = styled.div`
     flex: 3;
     margin: 5px;
+    
 `;
+
 
 const Title = styled.div`
     font-size: 20px;
@@ -36,6 +65,7 @@ const Body = styled.div`
     height: 60%;
     padding: 5px;
     font-weight: 300;
+    object-fit: cover;
 `;
 const Footer = styled.div`
     display: flex;
@@ -57,7 +87,10 @@ const ListCard = ({img,title,desc,status}) => {
     },[status])
     return (
         <StyleListCard>
-            <Img src={img} alt='' />
+            <WrapperImg>
+                <Img src={img} alt='' />
+            </WrapperImg>
+            
             <Contents>
                 <Title>{title}</Title>
                 <Body>{desc}</Body>

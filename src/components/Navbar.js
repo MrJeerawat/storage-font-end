@@ -29,7 +29,7 @@ const LI = styled.li`
     text-decoration: none;
     :hover{
         border: none;
-        color: grey;
+       
         background-color: white;
         border-radius: 10px;
 

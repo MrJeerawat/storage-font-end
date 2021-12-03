@@ -22,7 +22,7 @@ const Contents = () => {
     return (
         <>
             <Card>
-                <StyledLink to='equipment'><CardContent title={'All product'}/></StyledLink>
+                <StyledLink to='equipment'><CardContent title={'All Equipments'}/></StyledLink>
             </Card>
             <Card>
                 <StyledLink to='borrowed'><CardContent title={'Borrowed'} /></StyledLink>
